@@ -39,7 +39,7 @@ export const FAQ = () => {
   return (
     <section
       id="faqs"
-      className="py-20 bg-gradient-to-b from-[#FFFDE7] to-[#FFF8E1] relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-[#e6edf8] via-[#cfd8f7] to-[#e6edf8] relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
         {/* Title */}
@@ -49,7 +49,7 @@ export const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 drop-shadow-md">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] drop-shadow-md">
             ✨ Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
@@ -65,19 +65,19 @@ export const FAQ = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-2xl bg-white border-2 border-dashed border-yellow-400 shadow-lg hover:shadow-xl transition-shadow"
+              className="rounded-2xl bg-white border-2 border-dashed border-sky-200 shadow-lg hover:shadow-xl transition-shadow"
             >
               <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-yellow-50 transition-colors rounded-2xl"
+                className="w-full p-6 text-left flex items-center justify-between hover:bg-sky-50 transition-colors rounded-2xl"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-lg font-bold text-blue-900 pr-4">
+                <h3 className="text-lg font-bold text-blue-800 pr-4">
                   {faq.question}
                 </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="w-6 h-6 text-orange-500 flex-shrink-0"
+                  className="w-6 h-6 text-blue-600 flex-shrink-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,21 +128,21 @@ export const FAQ = () => {
               href="https://wa.me/919987029998"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-400 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-500 transition-all shadow-md"
+              className="bg-blue-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"
             >
               💬 Chat on WhatsApp
             </a>
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md">
+            <button className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-all shadow-md">
               🏫 Register Your School
             </button>
           </div>
         </motion.div>
       </div>
 
-      {/* Funky Decorative Elements */}
-      <div className="absolute top-12 left-10 w-16 h-16 bg-pink-400 rounded-full blur-lg opacity-30 animate-bounce"></div>
-      <div className="absolute bottom-16 right-10 w-24 h-24 bg-blue-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
-      <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-yellow-300 rounded-full blur-xl opacity-30 animate-spin"></div>
+      {/* Decorative Elements */}
+      <div className="absolute top-12 left-10 w-16 h-16 bg-blue-400 rounded-full blur-lg opacity-30 animate-bounce"></div>
+      <div className="absolute bottom-16 right-10 w-24 h-24 bg-sky-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
+      <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-indigo-300 rounded-full blur-xl opacity-30 animate-spin"></div>
     </section>
   );
 };

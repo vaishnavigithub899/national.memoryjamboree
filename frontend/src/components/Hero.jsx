@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-yellow-50 to-green-100 text-center overflow-hidden font-sans">
       {/* Decorative doodles */}
-      <div className="absolute top-10 left-10 text-blue-500 opacity-30 animate-bounce">
+      <div className="absolute top-10 left-10 text-sky-950 opacity-30 animate-bounce">
         <BookOpen size={60} />
       </div>
       <div className="absolute bottom-16 right-12 text-yellow-500 opacity-40 animate-bounce">
@@ -47,7 +47,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="px-6 py-2 rounded-full bg-yellow-300/80 text-blue-900 font-bold shadow-md"
+          className="px-6 py-2 rounded-full bg-yellow-300/80 text-sky-950 font-bold shadow-md"
         >
           🎓 School National Event | 25th Oct 2025
         </motion.span>
@@ -57,9 +57,9 @@ const Hero = () => {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="mt-8 text-5xl md:text-7xl font-extrabold text-blue-800 drop-shadow-lg"
+          className="mt-8 text-5xl md:text-7xl font-extrabold text-sky-950 drop-shadow-lg"
         >
-          Memory Championship 2025
+          National Memory Championship 2025
         </motion.h1>
 
         {/* Subtitle */}
@@ -67,7 +67,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="mt-4 max-w-2xl text-lg md:text-2xl text-gray-700 font-medium"
+          className="mt-4 max-w-2xl text-lg md:text-2xl text-sky-950 font-medium"
         >
           A fun-filled competition of <span className="text-red-500">intelligence</span> &{" "}
           <span className="text-green-600">memory power</span> for students!
@@ -106,13 +106,13 @@ const Hero = () => {
         >
           <a
             href="/register"
-            className="bg-yellow-400 text-blue-900 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-yellow-500 transition transform hover:scale-110"
+            className="bg-yellow-400 text-sky-950 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-yellow-500 transition transform hover:scale-110"
           >
             ✏️ Register Now
           </a>
           <a
             href="#about"
-            className="bg-blue-500 text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-blue-600 transition transform hover:scale-110"
+            className="bg-sky-950 text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-sky-950 transition transform hover:scale-110"
           >
             📚 Learn More
           </a>

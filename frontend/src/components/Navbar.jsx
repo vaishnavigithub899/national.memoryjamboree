@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home, BookOpen, Award, Phone } from "lucide-react"; // icons
-import logo from "../assets/img/logo.png";
-import msfi from "../assets/img/msfi.png";
-import iam from "../assets/img/IAM-Logo.png";
+import whiteforest from "../assets/img/whiteforest.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,32 +33,9 @@ export const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between transition-all duration-500">
-        {/* 🔹 Left: Organized + Approved */}
-        <div className="hidden md:flex items-center space-x-6 text-gray-800">
-          <div className="flex items-center space-x-2">
-            <span className="font-medium">Organized by</span>
-            <img
-              src={msfi}
-              alt="MSFI Logo"
-              className="w-10 h-10 object-contain rounded-lg hover:scale-110 transition-transform duration-300"
-            />
-            <img
-              src={logo}
-              alt="Brain Infinite Logo"
-              className="w-10 h-10 object-contain rounded-lg hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-
-          <div className="w-px h-10 bg-gray-400"></div>
-
-          <div className="flex items-center space-x-2">
-            <span className="font-medium">Approved by</span>
-            <img
-              src={iam}
-              alt="IAM Logo"
-              className="w-10 h-10 object-contain rounded-lg hover:scale-110 transition-transform duration-300"
-            />
-          </div>
+        {/* 🔹 Left: Logo */}
+        <div>
+          <img src={whiteforest} alt="Whiteforest Logo" className="h-15 w-auto" />
         </div>
 
         {/* 🔹 Center: Menu */}
@@ -83,9 +58,9 @@ export const Navbar = () => {
         {/* 🔹 Right: Register */}
         <div className="hidden md:flex items-center">
           <a href="/register">
-            <button className="bg-[#000080] text-white font-semibold px-6 py-2 rounded-full shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden">
+            <button className="bg-sky-950 text-white font-semibold px-9 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden">
               <span className="relative z-10">Register</span>
-              <span className="absolute inset-0 rounded-full bg-[#000080] opacity-30 blur-md animate-ping"></span>
+              <span className="absolute inset-0 rounded-full bg-sky-950 opacity-30 blur-md animate-ping"></span>
             </button>
           </a>
         </div>
@@ -119,24 +94,6 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
-
-          <div className="flex items-center space-x-4 pt-6">
-            <img
-              src={msfi}
-              alt="MSFI Logo"
-              className="w-12 h-12 object-contain rounded-lg hover:scale-110 transition-transform"
-            />
-            <img
-              src={logo}
-              alt="Brain Infinite Logo"
-              className="w-12 h-12 object-contain rounded-lg hover:scale-110 transition-transform"
-            />
-            <img
-              src={iam}
-              alt="IAM Logo"
-              className="w-12 h-12 object-contain rounded-lg hover:scale-110 transition-transform"
-            />
-          </div>
 
           <a href="/register" onClick={toggleMenu}>
             <button className="mt-6 bg-[#000080] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:scale-105 transition relative">

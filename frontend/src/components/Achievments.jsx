@@ -40,7 +40,7 @@ export const Achievements = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Featured in Media */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-4">
             Featured In Leading Media
           </h2>
           <p className="text-gray-600 mb-12">
@@ -68,7 +68,7 @@ export const Achievements = () => {
 
         {/* Top Schools */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8">
             Top Schools Trained For <span className="text-orange-600">Memory Championship</span>
           </h2>
         </motion.div>
@@ -84,7 +84,7 @@ export const Achievements = () => {
               <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center rounded-full bg-gray-100">
                 <img src={school.logo} alt={school.name} className="object-contain w-28 h-28" />
               </div>
-              <h3 className="font-semibold text-lg text-blue-900">{school.name}</h3>
+              <h3 className="font-semibold text-lg text-sky-950">{school.name}</h3>
             </motion.div>
           ))}
         </motion.div>

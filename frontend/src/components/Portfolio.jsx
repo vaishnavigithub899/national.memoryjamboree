@@ -26,7 +26,7 @@ export const Portfolio = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-sky-950">
             Impressions Of World Memory Championship 2024
           </h2>
         </motion.div>

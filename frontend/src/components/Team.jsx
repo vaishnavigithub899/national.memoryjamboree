@@ -36,7 +36,7 @@ export const Team = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-blue-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-sky-950">
             Our Team
           </h2>
           <p className="text-gray-700 text-lg md:text-xl">
@@ -63,7 +63,7 @@ export const Team = () => {
               />
               <div className="p-6 text-center">
                 <motion.h4
-                  className="text-xl font-semibold text-blue-900"
+                  className="text-xl font-semibold text-sky-950"
                   whileHover={{ scale: 1.05 }}
                 >
                   {member.name}

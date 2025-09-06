@@ -22,7 +22,7 @@ export const Category = () => {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h2 className="text-5xl md:text-6xl font-extrabold text-blue-700 drop-shadow-md">
+            <h2 className="text-5xl md:text-6xl font-extrabold text-sky-950 drop-shadow-md">
               National Memory Championship
             </h2>
             <p className="text-lg md:text-xl leading-relaxed">
@@ -38,7 +38,7 @@ export const Category = () => {
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-3xl md:text-4xl font-semibold mb-12 text-center text-blue-600"
+              className="text-3xl md:text-4xl font-semibold mb-12 text-center text-sky-950"
             >
               Categories of Memory Athletes
             </motion.h3>
@@ -67,7 +67,7 @@ export const Category = () => {
                       transition={{ type: "spring", stiffness: 200 }}
                     />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-blue-800">{cat.title}</h3>
+                  <h3 className="text-2xl font-bold text-sky-950">{cat.title}</h3>
                 </motion.div>
               ))}
             </div>

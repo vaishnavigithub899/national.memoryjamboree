@@ -1,10 +1,9 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export const Connect_with_us = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#FFF8DC] to-[#FFEFD5] text-blue-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#EAF0F8] to-[#D6E0F5] text-sky-950 relative overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Title */}
         <motion.div
@@ -13,7 +12,7 @@ export const Connect_with_us = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#FF5722] to-[#FFC107] drop-shadow-md">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] drop-shadow-md">
             🎒 Connect With Us
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto font-medium">
@@ -27,7 +26,7 @@ export const Connect_with_us = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-3xl shadow-2xl p-8 border-4 border-dashed border-yellow-300 relative"
+            className="bg-white rounded-3xl shadow-2xl p-8 border-4 border-dashed border-sky-300 relative"
           >
             {/* Cute doodle icon */}
             <div className="absolute -top-8 -right-6 text-5xl rotate-12">✏️</div>
@@ -38,7 +37,7 @@ export const Connect_with_us = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full border-2 border-blue-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-[#FFFDE7]"
+                  className="w-full border-2 border-sky-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-800 bg-[#F0F4FF]"
                 />
               </div>
 
@@ -47,7 +46,7 @@ export const Connect_with_us = () => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full border-2 border-blue-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-[#FFFDE7]"
+                  className="w-full border-2 border-sky-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-800 bg-[#F0F4FF]"
                 />
               </div>
 
@@ -56,7 +55,7 @@ export const Connect_with_us = () => {
                 <input
                   type="text"
                   placeholder="Your School"
-                  className="w-full border-2 border-blue-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-[#FFFDE7]"
+                  className="w-full border-2 border-sky-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-800 bg-[#F0F4FF]"
                 />
               </div>
 
@@ -65,13 +64,13 @@ export const Connect_with_us = () => {
                 <textarea
                   placeholder="Write your message..."
                   rows="4"
-                  className="w-full border-2 border-blue-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-[#FFFDE7] resize-none"
+                  className="w-full border-2 border-sky-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-800 bg-[#F0F4FF] resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#FF9800] to-[#FF5722] text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:scale-105 transition-transform w-full"
+                className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:scale-105 transition-transform w-full"
               >
                 🚀 Send Message
               </button>
@@ -85,9 +84,9 @@ export const Connect_with_us = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="bg-white rounded-3xl shadow-xl p-6 border-l-8 border-orange-400 relative">
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-l-8 border-sky-800 relative">
               <div className="absolute -top-6 -left-4 text-4xl">📚</div>
-              <h3 className="text-xl font-extrabold mb-2 text-blue-800">
+              <h3 className="text-xl font-extrabold mb-2 text-sky-900">
                 Contact Info
               </h3>
               <p><span className="font-semibold">📧 Email:</span> delhi@memorychampionship.in</p>
@@ -95,9 +94,9 @@ export const Connect_with_us = () => {
               <p><span className="font-semibold">📍 Address:</span> National Championship Academy, Green Park, New Delhi 110016</p>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-xl p-6 border-l-8 border-green-400 relative">
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-l-8 border-sky-600 relative">
               <div className="absolute -top-6 -left-4 text-4xl">🎨</div>
-              <h3 className="text-xl font-extrabold mb-2 text-blue-800">
+              <h3 className="text-xl font-extrabold mb-2 text-sky-900">
                 Follow Us
               </h3>
               <div className="flex gap-6 text-3xl">
@@ -111,9 +110,9 @@ export const Connect_with_us = () => {
       </div>
 
       {/* Decorative funky blobs */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-pink-400 rounded-full blur-xl opacity-30 animate-bounce"></div>
-      <div className="absolute bottom-16 right-10 w-24 h-24 bg-green-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
-      <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-yellow-400 rounded-full blur-xl opacity-30 animate-spin"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-blue-400 rounded-full blur-xl opacity-30 animate-bounce"></div>
+      <div className="absolute bottom-16 right-10 w-24 h-24 bg-indigo-400 rounded-full blur-xl opacity-30 animate-pulse"></div>
+      <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-sky-400 rounded-full blur-xl opacity-30 animate-spin"></div>
     </section>
   );
 };
