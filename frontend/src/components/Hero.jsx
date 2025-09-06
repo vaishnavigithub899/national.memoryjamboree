@@ -69,7 +69,8 @@ const Hero = () => {
           transition={{ delay: 1, duration: 1 }}
           className="mt-4 max-w-2xl text-lg md:text-2xl text-sky-950 font-medium"
         >
-          A fun-filled competition of <span className="text-red-500">intelligence</span> &{" "}
+          A fun-filled competition of{" "}
+          <span className="text-red-500">intelligence</span> &{" "}
           <span className="text-green-600">memory power</span> for students!
         </motion.p>
 
@@ -78,7 +79,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-12 flex gap-6 md:gap-12 justify-center bg-green-900 text-white rounded-2xl p-6 shadow-xl border-4 border-yellow-400"
+          className="mt-12 flex gap-6 md:gap-12 justify-center bg-gradient-to-r from-[#141f3a] via-[#1e293b] to-[#133875] text-white rounded-2xl p-6 shadow-2xl border-2 border-yellow-400"
         >
           {[
             { label: "Days", value: timeLeft.days },
@@ -90,7 +91,7 @@ const Hero = () => {
               <span className="block text-4xl md:text-6xl font-extrabold text-yellow-300">
                 {item.value}
               </span>
-              <span className="text-sm uppercase tracking-wider">
+              <span className="text-sm uppercase tracking-wider text-gray-200">
                 {item.label}
               </span>
             </div>

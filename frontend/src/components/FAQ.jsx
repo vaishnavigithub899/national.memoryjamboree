@@ -128,7 +128,7 @@ export const FAQ = () => {
               href="https://wa.me/919987029998"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"
+              className="bg-sky-950 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"
             >
               💬 Chat on WhatsApp
             </a>
