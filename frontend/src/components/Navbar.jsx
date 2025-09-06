@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home, BookOpen, Award, Phone } from "lucide-react"; // icons
-import whiteforest from "../assets/img/whiteforest.png";
+import whiteforest from "/img/whiteforest.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

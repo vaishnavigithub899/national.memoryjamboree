@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export const Category = () => {
   const categories = [
-    { id: 1, title: "Kids (Age 5-12)", img: "src/assets/svg/kids.svg", delay: 0.2 },
-    { id: 2, title: "Juniors (Age 13-17)", img: "src/assets/svg/juniors.svg", delay: 0.3 },
-    { id: 3, title: "Adults (Age 18-59)", img: "src/assets/svg/adults.svg", delay: 0.4 },
-    { id: 4, title: "Seniors (Age 60+)", img: "src/assets/svg/senior.svg", delay: 0.5 },
+    { id: 1, title: "Kids (Age 5-12)", img: "/svg/Kids.svg", delay: 0.2 },
+    { id: 2, title: "Juniors (Age 13-17)", img: "/svg/Juniors.svg", delay: 0.3 },
+    { id: 3, title: "Adults (Age 18-59)", img: "/svg/adults.svg", delay: 0.4 },
+    { id: 4, title: "Seniors (Age 60+)", img: "/svg/senior.svg", delay: 0.5 },
   ];
 
   return (

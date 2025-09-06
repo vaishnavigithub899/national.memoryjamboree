@@ -5,17 +5,17 @@ export const Team = () => {
     {
       name: "Monica Thomas",
       role: "Chief Executive Officer",
-      img: "src/assets/img/monica.png",
+      img: "img/monica.png",
     },
     {
       name: "Sachin Tanwar",
       role: "Founder: Genius Kid",
-      img: "src/assets/img/SachinTanwar.jpeg",
+      img: "img/SachinTanwar.jpeg",
     },
     {
       name: "Dr. Deepa Goyal",
       role: "Record Holder | Founder: The Skill Station",
-      img: "src/assets/img/Deepa_Goyal.jpeg",
+      img: "img/Deepa_Goyal.jpeg",
     },
   ];
 

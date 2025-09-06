@@ -95,7 +95,7 @@ export const Benefits = () => {
             className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden w-64 md:w-80 p-3 cursor-pointer transition-all"
           >
             <img
-              src="src/assets/img/homecertificate.png"
+              src="img/homecertificate.png"
               alt="Certificate"
               className="w-full h-auto object-contain rounded-lg"
             />

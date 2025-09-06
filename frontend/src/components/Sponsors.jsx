@@ -5,7 +5,7 @@ export const Sponsors = () => {
     {
       name: "Gravit Infosystems",
       link: "https://gravitinfosystems.com/",
-      img: "src/assets/img/GravityInfoSystem.png",
+      img: "img/GravityInfoSystem.png",
     },
     // Add more sponsors here
   ];
