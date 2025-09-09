@@ -59,7 +59,7 @@ const Hero = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-8 text-5xl md:text-7xl font-extrabold text-sky-950 drop-shadow-lg"
         >
-          MEMORY JAMBOREE 2025
+          National Memory Championship 2025
         </motion.h1>
 
         {/* Subtitle */}
@@ -69,9 +69,9 @@ const Hero = () => {
           transition={{ delay: 1, duration: 1 }}
           className="mt-4 max-w-2xl text-lg md:text-2xl text-sky-950 font-medium"
         >
-          A unique memory sport event where you will compete with {" "}
-          <span className="text-red-500">your brain </span> &{" "}
-          <span className="text-green-600">memory power</span>!
+          A fun-filled competition of{" "}
+          <span className="text-red-500">intelligence</span> &{" "}
+          <span className="text-green-600">memory power</span> for students!
         </motion.p>
 
         {/* Countdown (chalkboard style) */}

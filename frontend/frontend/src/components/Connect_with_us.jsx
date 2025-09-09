@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaWhatsapp, FaInstagram, FaFacebookF, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export const Connect_with_us = () => {
   return (
@@ -89,9 +89,9 @@ export const Connect_with_us = () => {
               <h3 className="text-xl font-extrabold mb-2 text-sky-900">
                 Contact Info
               </h3>
-              <p><span className="font-semibold">📧 Email:</span> query@memoryjamboree.com</p>
+              <p><span className="font-semibold">📧 Email:</span> delhi@memorychampionship.in</p>
               <p><span className="font-semibold">📞 Phone:</span> +91 88105 69514</p>
-              <p><span className="font-semibold">📍 Address:</span> Whiteforest Academy, Green Park Extension, New Delhi 110016</p>
+              <p><span className="font-semibold">📍 Address:</span> National Championship Academy, Green Park, New Delhi 110016</p>
             </div>
 
             <div className="bg-white rounded-3xl shadow-xl p-6 border-l-8 border-sky-600 relative">
@@ -103,8 +103,6 @@ export const Connect_with_us = () => {
                 <a href="#" className="hover:scale-125 transition-transform text-green-500"><FaWhatsapp /></a>
                 <a href="#" className="hover:scale-125 transition-transform text-pink-500"><FaInstagram /></a>
                 <a href="#" className="hover:scale-125 transition-transform text-blue-600"><FaFacebookF /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-red-600"><FaYoutube /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-blue-700"><FaLinkedin /></a>
               </div>
             </div>
           </motion.div>

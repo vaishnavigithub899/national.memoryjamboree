@@ -18,9 +18,9 @@ export const Footer = () => {
             transition={{ duration: 1 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-green-400">National Memory Jamboree</h3>
+            <h3 className="text-2xl font-bold text-green-400">National Memory Championship</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              National Memory Jamboree is an endeavour dedicated to the forest of 100 trillion neural connections inside a human brain. 
+              National Memory Championship is an endeavour dedicated to the forest of 100 trillion neural connections inside a human brain. 
               It offers Brain Training, Memory Mastery and Super Learning skills to students, teachers, parents, and professionals. 
               Starting with 1 student in 2019, over the years WhiteForest has evolved to serve and train many schools, colleges, and corporates.
             </p>
@@ -68,8 +68,8 @@ export const Footer = () => {
             <div className="flex items-start gap-3 text-gray-300">
               <FaMapMarkerAlt className="mt-1" />
               <p>
-                Whiteforest Academy, 
-                <br />Green Park Extension, New Delhi 110016
+                National Memory Championship <br />
+                Green Park, New Delhi 110016
               </p>
             </div>
           </motion.div>
@@ -88,7 +88,7 @@ export const Footer = () => {
             </div>
             <div className="flex items-center gap-3 text-gray-300">
               <FaEnvelope className="mt-1" />
-              <p>query@memoryjamboree.com</p>
+              <p>NMC@memorychampionship.in</p>
             </div>
           </motion.div>
         </div>

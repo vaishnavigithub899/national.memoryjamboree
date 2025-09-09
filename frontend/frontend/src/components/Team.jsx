@@ -8,29 +8,14 @@ export const Team = () => {
       img: "img/monica.png",
     },
     {
-      name: "Shashi Tiwari",
-      role: "Team Member",
-      img: "img/default.png",
+      name: "Sachin Tanwar",
+      role: "Founder: Genius Kid",
+      img: "img/SachinTanwar.jpeg",
     },
     {
-      name: "Sonam Garg",
-      role: "Team Member",
-      img: "img/default.png",
-    },
-    {
-      name: "Priya Agarwal",
-      role: "Team Member",
-      img: "img/default.png",
-    },
-    {
-      name: "Shaffy Jain",
-      role: "Team Member",
-      img: "img/default.png",
-    },
-    {
-      name: "Sonal",
-      role: "Team Member",
-      img: "img/default.png",
+      name: "Dr. Deepa Goyal",
+      role: "Record Holder | Founder: The Skill Station",
+      img: "img/Deepa_Goyal.jpeg",
     },
   ];
 

@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 
 export const Achievements = () => {
+  // Media logos with online URLs
+  const mediaLogos = [
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTisx4yvCzQGHDguabQMCg9ZdokDd3hID74wg&s", alt: "Times of India" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Kth4Er3tYfIlEPhGpBxH2QO9Zzi90tij9Q&s", alt: "Business Standard" },
+    { src: "https://img.freepik.com/premium-vector/tv-channel-logo-design-concept-vector-illustration_875240-84.jpg", alt: "Daily Hunt" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Aaj_tak_logo.png", alt: "Aaj Tak" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/4/48/ABP_News_logo.svg", alt: "ABP News" },
+  ];
 
   // School logos with online URLs
   const topSchools = [
@@ -30,11 +38,38 @@ export const Achievements = () => {
   return (
     <div className="py-20 bg-gradient-to-b from-[#fdfaf5] to-[#f6f0e5]">
       <div className="container mx-auto px-4 text-center">
+        {/* Featured in Media */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-4">
+            Featured In Leading Media
+          </h2>
+          <p className="text-gray-600 mb-12">
+            WMC has been recognized and covered by major media outlets worldwide
+          </p>
+        </motion.div>
+
+        {/* Media Logos with Pop Up */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 items-center mb-16"
+          variants={popUpContainer}
+          initial="hidden"
+          whileInView="visible"
+        >
+          {mediaLogos.map((logo, index) => (
+            <motion.div key={index} variants={popUpItem} className="flex items-center justify-center">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-32 w-auto hover:scale-110 transition-transform duration-300"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Top Schools */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8">
-            Students From Top Schools Have Trained For <span className="text-orange-600">Memory Jamboree</span>
+            Top Schools Trained For <span className="text-orange-600">Memory Championship</span>
           </h2>
         </motion.div>
 
