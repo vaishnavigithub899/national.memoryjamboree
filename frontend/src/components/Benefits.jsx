@@ -13,15 +13,31 @@ export const Benefits = () => {
     "Fun and enriching experience",
   ];
 
+  // Split into title + description for hover effect
   const athleteBenefits = [
-    "Sharper Focus & Faster Learning – Improves concentration and retention of new knowledge.",
-    "Academic & Professional Edge – Gives a strong advantage in studies, exams, and careers.",
-    "Confidence & Recognition – Builds self-belief and opens doors to national and international platforms.",
-    "Stronger Brain Fitness – Keeps the mind active, healthy, and sharp for life.",
-    "Better Connections & Creativity – Enhances social interactions and frees mental space for innovation.",
+    {
+      title: "Sharper Focus & Faster Learning",
+      desc: "Improves concentration and retention of new knowledge.",
+    },
+    {
+      title: "Academic & Professional Edge",
+      desc: "Gives a strong advantage in studies, exams, and careers.",
+    },
+    {
+      title: "Confidence & Recognition",
+      desc: "Builds self-belief and opens doors to national and international platforms.",
+    },
+    {
+      title: "Stronger Brain Fitness",
+      desc: "Keeps the mind active, healthy, and sharp for life.",
+    },
+    {
+      title: "Better Connections & Creativity",
+      desc: "Enhances social interactions and frees mental space for innovation.",
+    },
   ];
 
-  // Render benefits with optional starting index
+  // Render normal benefits (pre-event, post-event)
   const renderBenefits = (items, startIndex = 0) =>
     items.map((item, index) => (
       <motion.div
@@ -35,6 +51,34 @@ export const Benefits = () => {
           {startIndex + index + 1}
         </div>
         <h4 className="text-white text-sm font-medium">{item}</h4>
+      </motion.div>
+    ));
+
+  // Render athlete benefits with hover expand
+  const renderAthleteBenefits = (items) =>
+    items.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="relative group bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer flex items-start gap-3 w-max"
+      >
+        {/* Number */}
+        <div className="w-7 h-10 flex-shrink-0 bg-yellow-400 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+          {index + 1}
+        </div>
+
+        {/* Text */}
+        <div>
+          <h4 className="text-white text-sm font-medium">
+            {item.title}
+          </h4>
+          {/* Description expands only on hover */}
+          <p className="text-white/80 text-xs mt-1 overflow-hidden transition-all duration-300 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100">
+            {item.desc}
+          </p>
+        </div>
       </motion.div>
     ));
 
@@ -73,7 +117,7 @@ export const Benefits = () => {
           </h2>
         </motion.div>
         <div className="flex flex-wrap gap-3 justify-center">
-          {renderBenefits(athleteBenefits, 0)} {/* Restart numbering from 1 */}
+          {renderAthleteBenefits(athleteBenefits)}
         </div>
       </div>
 
