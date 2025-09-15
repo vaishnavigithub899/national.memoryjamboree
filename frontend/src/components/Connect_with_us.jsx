@@ -100,11 +100,11 @@ export const Connect_with_us = () => {
                 Follow Us
               </h3>
               <div className="flex gap-6 text-3xl">
-                <a href="#" className="hover:scale-125 transition-transform text-green-500"><FaWhatsapp /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-pink-500"><FaInstagram /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-blue-600"><FaFacebookF /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-red-600"><FaYoutube /></a>
-                <a href="#" className="hover:scale-125 transition-transform text-blue-700"><FaLinkedin /></a>
+                <a href="I want to know more about National Memory Championship”, +91 88009 18814" className="hover:scale-125 transition-transform text-green-500"><FaWhatsapp /></a>
+                <a href="https://www.instagram.com/whiteforestacademy/" className="hover:scale-125 transition-transform text-pink-500"><FaInstagram /></a>
+                <a href="https://www.facebook.com/WhiteForestAcademy" className="hover:scale-125 transition-transform text-blue-600"><FaFacebookF /></a>
+                <a href="https://www.youtube.com/@WhiteForestAcademy" className="hover:scale-125 transition-transform text-red-600"><FaYoutube /></a>
+                <a href="https://www.linkedin.com/in/coachmonicathomas/" className="hover:scale-125 transition-transform text-blue-700"><FaLinkedin /></a>
               </div>
             </div>
           </motion.div>

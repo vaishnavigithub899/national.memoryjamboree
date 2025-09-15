@@ -125,7 +125,7 @@ export const FAQ = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://wa.me/919987029998"
+              href="I want to know more about National Memory Championship”, +91 88009 18814"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-sky-950 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"

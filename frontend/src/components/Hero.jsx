@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { BookOpen, Pencil, GraduationCap } from "lucide-react";
 
 const Hero = () => {
-  const eventDate = new Date(2025, 9, 25, 0, 0, 0);
+  // December = 11 (0-based month indexing in JS)
+  const eventDate = new Date(2025, 11, 14, 0, 0, 0);
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="px-6 py-2 rounded-full bg-yellow-300/80 text-sky-950 font-bold shadow-md"
         >
-          🎓 School National Event | 25th Oct 2025
+          🎓 School National Event | 14th Dec 2025, Sunday
         </motion.span>
 
         {/* Main Title */}
@@ -69,7 +70,7 @@ const Hero = () => {
           transition={{ delay: 1, duration: 1 }}
           className="mt-4 max-w-2xl text-lg md:text-2xl text-sky-950 font-medium"
         >
-          A unique memory sport event where you will compete with {" "}
+          A unique memory sport event where you will compete with{" "}
           <span className="text-red-500">your brain </span> &{" "}
           <span className="text-green-600">memory power</span>!
         </motion.p>

@@ -116,7 +116,7 @@ export const Benefits = () => {
             Benefits as a Memory Athlete
           </h2>
         </motion.div>
-        <div className="flex flex-wrap gap-3 justify-center">
+        <div className="flex flex-wrap gap-3 justify-center ">
           {renderAthleteBenefits(athleteBenefits)}
         </div>
       </div>
