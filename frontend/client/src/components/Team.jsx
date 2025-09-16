@@ -4,18 +4,33 @@ export const Team = () => {
   const teamMembers = [
     {
       name: "Monica Thomas",
-      role: "Chief Executive Officer",
+      role: "Founder Whiteforest Academy",
       img: "img/monica.png",
     },
     {
-      name: "Sachin Tanwar",
-      role: "Founder: Genius Kid",
-      img: "img/SachinTanwar.jpeg",
+      name: "Dr. Shashi Tiwari",
+      role: "Memory coach at Whiteforest Academy",
+      img: "img/Dr. Shashi Tiwari.png",
     },
     {
-      name: "Dr. Deepa Goyal",
-      role: "Record Holder | Founder: The Skill Station",
-      img: "img/Deepa_Goyal.jpeg",
+      name: "Ms. Sonam Garg",
+      role: "Memory coach at Whiteforest Academy",
+      img: "img/Ms. Sonam Garg.jpg",
+    },
+    {
+      name: "Ms. Priya Agarwal",
+      role: "Memory coach at Whiteforest Academy",
+      img: "img/Ms. Priya Agarwal Priya.jpg",
+    },
+    {
+      name: "Dr. Shaffy Jain",
+      role: "Memory coach at Whiteforest Academy",
+      img: "img/Dr. Shaffy Jain.png",
+    },
+    {
+      name: "Ms. Sonal",
+      role: "Memory coach at Whiteforest Academy",
+      img: "img/Ms. Sonal.png",
     },
   ];
 

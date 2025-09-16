@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 
 export const Category = () => {
   const categories = [
-    { id: 1, title: "Kids (Age 5-12)", img: "/svg/Kids.svg", delay: 0.2 },
-    { id: 2, title: "Juniors (Age 13-17)", img: "/svg/Juniors.svg", delay: 0.3 },
-    { id: 3, title: "Adults (Age 18-59)", img: "/svg/adults.svg", delay: 0.4 },
-    { id: 4, title: "Seniors (Age 60+)", img: "/svg/senior.svg", delay: 0.5 },
+    { id: 1, title: "Kids (Classes 1st to 4th)", img: "/svg/Kids.svg", delay: 0.2 },
+    { id: 2, title: "Juniors (Classes 5th to 8th)", img: "/svg/Juniors.svg", delay: 0.3 },
+    { id: 3, title: "Teenagers (Classes 9th to under 18 years)", img: "/img/Teenagers.png", delay: 0.3 },
+    { id: 4, title: "Adults (18 to 59 years)", img: "/svg/adults.svg", delay: 0.4 },
+    { id: 5, title: "Seniors (60+ years)", img: "/svg/senior.svg", delay: 0.5 },
   ];
 
   return (
@@ -23,10 +24,10 @@ export const Category = () => {
             className="space-y-6"
           >
             <h2 className="text-5xl md:text-6xl font-extrabold text-sky-950 drop-shadow-md">
-              National Memory Championship
+              National Memory Jamboree
             </h2>
             <p className="text-lg md:text-xl leading-relaxed">
-              NMC is the National Cup of Memory Sports where memory athletes from schools and
+              NMJ is the National Cup of Memory Sports where memory athletes from schools and
               cities compete to memorize & recall information under specific guidelines. The first
               championship was held in London in 1991.
             </p>
@@ -46,7 +47,7 @@ export const Category = () => {
             <div className="grid sm:grid-cols-2 gap-10">
               {categories.map((cat) => (
                 <motion.div
-                  key={cat.id}
+                  key={`${cat.id}-${cat.title}`} // ✅ unique key
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{ scale: 1.1 }}

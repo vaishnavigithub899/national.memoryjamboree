@@ -1,64 +1,65 @@
 import { motion } from "framer-motion";
-import { FaBookOpen, FaPencilAlt, FaAppleAlt, FaChalkboardTeacher, FaGraduationCap } from "react-icons/fa";
-import { MdOutlineScience, MdOutlineEmojiPeople } from "react-icons/md";
-import { GiNotebook } from "react-icons/gi";
+import { FaClock, FaFont, FaImages, FaMicrophoneAlt, FaUserFriends } from "react-icons/fa";
+import { MdOutlineNumbers } from "react-icons/md";
+import { GiCardPlay } from "react-icons/gi";
+import { BsCalendarDate } from "react-icons/bs";
 
 export const Discipline = () => {
   const disciplines = [
     { 
       id: 1, 
-      title: "Mathematics", 
-      desc: "Sharpen your problem-solving skills with fun equations and number puzzles.", 
-      icon: <FaBookOpen className="w-12 h-12 text-blue-600" />, 
+      title: "5 Minute Random Numbers", 
+      desc: "Memorize and recall as many random numbers as possible within 5 minutes.", 
+      icon: <MdOutlineNumbers className="w-12 h-12 text-blue-600" />, 
       delay: 0.1 
     },
     { 
       id: 2, 
-      title: "Science Experiments", 
-      desc: "Explore the wonders of physics, chemistry, and biology through experiments.", 
-      icon: <MdOutlineScience className="w-12 h-12 text-cyan-600" />, 
+      title: "5 Minute Random Words", 
+      desc: "Challenge your memory with a list of random words in just 5 minutes.", 
+      icon: <FaFont className="w-12 h-12 text-cyan-600" />, 
       delay: 0.2 
     },
     { 
       id: 3, 
-      title: "Creative Writing", 
-      desc: "Unleash your imagination with stories, essays, and poetry writing challenges.", 
-      icon: <FaPencilAlt className="w-12 h-12 text-indigo-600" />, 
+      title: "5 Minute Random Images", 
+      desc: "Recall random abstract images accurately in a 5-minute challenge.", 
+      icon: <FaImages className="w-12 h-12 text-indigo-600" />, 
       delay: 0.3 
     },
     { 
       id: 4, 
-      title: "General Knowledge", 
-      desc: "Test your awareness with quizzes from history, geography, and world events.", 
-      icon: <FaGraduationCap className="w-12 h-12 text-blue-800" />, 
+      title: "5 Minute Binary Digits", 
+      desc: "Memorize long strings of binary digits (0s & 1s) within 5 minutes.", 
+      icon: <FaClock className="w-12 h-12 text-blue-800" />, 
       delay: 0.4 
     },
     { 
       id: 5, 
-      title: "Sports & Fitness", 
-      desc: "Build teamwork and energy through fun outdoor and indoor sports.", 
-      icon: <MdOutlineEmojiPeople className="w-12 h-12 text-teal-600" />, 
+      title: "5 Minute Fictional Dates", 
+      desc: "Recall fictional historical dates with corresponding events in 5 minutes.", 
+      icon: <BsCalendarDate className="w-12 h-12 text-teal-600" />, 
       delay: 0.5 
     },
     { 
       id: 6, 
-      title: "Art & Craft", 
-      desc: "Express creativity with painting, craft, and colorful design activities.", 
-      icon: <GiNotebook className="w-12 h-12 text-purple-600" />, 
+      title: "15 Minute Names and Faces", 
+      desc: "Memorize and recall the names of people shown in photographs.", 
+      icon: <FaUserFriends className="w-12 h-12 text-purple-600" />, 
       delay: 0.6 
     },
     { 
       id: 7, 
-      title: "Healthy Eating", 
-      desc: "Learn about nutrition and healthy food habits with fun challenges.", 
-      icon: <FaAppleAlt className="w-12 h-12 text-indigo-700" />, 
+      title: "Speed Cards", 
+      desc: "Memorize the order of a shuffled deck of cards in the fastest time possible.", 
+      icon: <GiCardPlay className="w-12 h-12 text-indigo-700" />, 
       delay: 0.7 
     },
     { 
       id: 8, 
-      title: "Public Speaking", 
-      desc: "Boost your confidence with debates, speeches, and storytelling.", 
-      icon: <FaChalkboardTeacher className="w-12 h-12 text-sky-700" />, 
+      title: "Spoken Numbers", 
+      desc: "Recall spoken digits presented at a fast pace with high accuracy.", 
+      icon: <FaMicrophoneAlt className="w-12 h-12 text-sky-700" />, 
       delay: 0.8 
     },
   ];
@@ -75,11 +76,11 @@ export const Discipline = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6]">
-            School Disciplines 2025
+            Memory Disciplines
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-            Across <span className="text-sky-950 font-bold">8 exciting subjects</span>, 
-            students explore creativity, knowledge, and skills to shine in every field.
+            Memory athletes will compete across <span className="text-sky-950 font-bold">8 memory disciplines </span>
+            over a day.
           </p>
         </motion.div>
 

@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 
 export const Portfolio = () => {
   const portfolioImages = [
-    "img/masonry-portfolio/masonry-portfolio-1.jpg",
-    "img/masonry-portfolio/masonry-portfolio-2.jpeg",
-    "img/masonry-portfolio/masonry-portfolio-3.jpeg",
-    "img/masonry-portfolio/masonry-portfolio-4.jpg",
-    "img/masonry-portfolio/masonry-portfolio-5.jpg",
-    "img/masonry-portfolio/masonry-portfolio-6.jpg",
-    "img/masonry-portfolio/masonry-portfolio-7.jpg",
-    "img/masonry-portfolio/masonry-portfolio-8.jpg",
-    "img/masonry-portfolio/masonry-portfolio-9.jpg",
+    "img/masonry-portfolio/img1.jpg",
+    "img/masonry-portfolio/img2.jpg",
+    "img/masonry-portfolio/img3.jpeg",
+    "img/masonry-portfolio/img4.jpeg",
+    "img/masonry-portfolio/img5.jpeg",
+    "img/masonry-portfolio/img6.jpg",
+    "img/masonry-portfolio/img7.jpeg",
+    "img/masonry-portfolio/img8.jpeg",
+    "img/masonry-portfolio/img9.jpeg",
+    "img/masonry-portfolio/img10.jpg",
+    "img/masonry-portfolio/img11.jpg",
+    "img/masonry-portfolio/img12.jpeg",
   ];
 
   return (
