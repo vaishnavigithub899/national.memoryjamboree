@@ -125,7 +125,9 @@ export const FAQ = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="I want to know more about National Memory Championship”, +91 88009 18814"
+              href={`https://wa.me/918810569514?text=${encodeURIComponent(
+                "Hi,\nWe want to register as a school group. Kindly let us know the process."
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-sky-950 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"

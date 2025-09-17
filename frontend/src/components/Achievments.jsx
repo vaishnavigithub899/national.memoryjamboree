@@ -1,308 +1,182 @@
-// import { motion } from "framer-motion";
-
-// export const Achievements = () => {
-//   // School logos with online URLs
-//   const topSchools = [
-//     { name: "Guru Harkrishan Public School, Shahdara, Delhi", logo: "https://www.schoolmykids.com/smk-media/2018/10/Guru-Harkrishan-Public-School-Shahdara-Delhi.png" },
-//     { name: "Colonel Satsangi's Kiran Memorial Public School, Chattarpur, New Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6DKO33H3V7u85HK-1bwbMykyZVjhnzm9VeQ&s" },
-//     { name: "Maxfort School, Rohini, Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcl1XPKv1Coymmia9WWGh327VFsUx1ykY7A&s" },
-//     { name: "St Mary Senior Secondary School, Mayur Vihar Phase 3, Delhi", logo: "https://play-lh.googleusercontent.com/-p5W4c3rn79o01Rdq3a5Dfk3OGsOJcYEKjVXZ-p9Nj-xcBfFQJuWxVlKh8ASC-8eckE" },
-//     { name: "Amity International school sector 6 Vasundhara Ghaziabad Uttar Pradesh", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRt8BCVh0qKGtee7ecuQSJZtDc2WOFvYMOqg&s" },
-//     { name: "Delhi Public School, Delhi NCR", logo: "https://dpsjhakri.com/images/Bgphotos/dps_logo.jpg" },
-//     { name: "Ambience Public School, Safdarjung Enclave, Delhi", logo: "https://c9.shauryasoft.com/media/bny-wlg-2410141309-1382812852-8.png" },
-//     { name: "Lotus Valley international School", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTnYW6FjlKz-_5DCvBMfrFFLVIxPSLrVE5w&s" },
-//     { name: "St. Mary’s School, Safdarjung Enclave, Delhi", logo: "https://images.uniapply.com/uploads/college/image/logo/2188/webp/St_Marys_School_1944_Logo_1.webp" },
-//     { name: "DL DAV MODEL SCHOOL PITAMPURA", logo: "https://delhischoolsdirectory.com/assets/upload/profileimg/PRFIMGUSR54021667539348.png" },
-//     { name: "Gyanshree school , Noida", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RGykDyH7gXX6UJccfMs7umA3xHj73Ard6Q&s" },
-//     { name: "Arwachin international school", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7KMSH2btgazMsMqFRdtsVCIHnBrLI1ZIvJA&s" },
-//     { name: "Holy Angels School", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7eHSsDe3u9HNhXCuNGinEL8LrnIkI6DNhHw&s" },
-//     { name: "Mount Abu Public School", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL7RPtCwPcW5Wa6pdOyl1NOns1Mmmb29XlNQ&s" },
-//     { name: "Parevartan School, Rajnagar Extension Ghaziabad", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU_qBCwxyYO7Dl_ethxt86HZSeJdSvnhqTg&s" },
-//     { name: "Queen Mary's school Northend Model Town", logo: "https://www.qmsmodeltown.com/image/schoollogo.png" },
-//     { name: "Silverline Prestige School, Ghaziabad", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaJhRgqD-pp_LnBQ8d--4ptodvXnf4H8bMkA&s" },
-//     { name: "Vivekananda School", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVC3FJVHUACwR3V1By57lqlWpqmD9kf8IcQ&s" },
-//   ];
-
-//   // Animation Variants
-//   const popUpContainer = {
-//     hidden: {},
-//     visible: {
-//       transition: {
-//         staggerChildren: 0.2,
-//       },
-//     },
-//   };
-
-//   const popUpItem = {
-//     hidden: { opacity: 0, scale: 0.5 },
-//     visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 200, damping: 15 } },
-//   };
-
-//   return (
-//     <div className="py-20 bg-gradient-to-b from-[#fdfaf5] to-[#f6f0e5]">
-//       <div className="container mx-auto px-4 text-center">
-//         {/* Heading */}
-//         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-//           <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8">
-//             Students From Top Schools Who Have Trained For <span className="text-orange-600">Memory Jamboree </span>in the past.
-//           </h2>
-//         </motion.div>
-
-//         {/* School Cards */}
-//         <motion.div
-//           className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
-//           variants={popUpContainer}
-//           initial="hidden"
-//           whileInView="visible"
-//         >
-//           {topSchools.map((school, index) => (
-//             <motion.div
-//               key={index}
-//               variants={popUpItem}
-//               className="rounded-lg bg-white shadow-md hover:shadow-lg transition-shadow p-4 text-center"
-//             >
-//               <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
-//                 <img src={school.logo} alt={school.name} className="object-contain w-20 h-20" />
-//               </div>
-//               <h3 className="font-semibold text-sm text-sky-950">{school.name}</h3>
-//             </motion.div>
-//           ))}
-//         </motion.div>
-
-//         {/* Call to Action */}
-//         <motion.div
-//           className="mt-16 text-center"
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           transition={{ duration: 0.8 }}
-//         >
-//           <p className="text-gray-600 mb-4">Want to see your school here?</p>
-//           <button className="text-orange-600 hover:text-orange-700 font-semibold underline text-lg">
-//             Register your school today for FREE →
-//           </button>
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
-
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Achievements = () => {
-  const [selectedSchool, setSelectedSchool] = useState(null);
-
-  // ✅ Full list of schools
-  const topSchools = [
+  const upcomingSchools = [
     {
-      name: "Guru Harkrishan Public School, Shahdara, Delhi",
-      logo: "https://www.schoolmykids.com/smk-media/2018/10/Guru-Harkrishan-Public-School-Shahdara-Delhi.png",
-    },
-    {
-      name: "Colonel Satsangi's Kiran Memorial Public School, Chattarpur, New Delhi",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6DKO33H3V7u85HK-1bwbMykyZVjhnzm9VeQ&s",
-    },
-    {
-      name: "Maxfort School, Rohini, Delhi",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcl1XPKv1Coymmia9WWGh327VFsUx1ykY7A&s",
-    },
-    {
-      name: "St Mary Senior Secondary School, Mayur Vihar Phase 3, Delhi",
-      logo: "https://play-lh.googleusercontent.com/-p5W4c3rn79o01Rdq3a5Dfk3OGsOJcYEKjVXZ-p9Nj-xcBfFQJuWxVlKh8ASC-8eckE",
+      name: "Ambience Public School, Safdarjung Enclave, Delhi",
+      logo: "https://c9.shauryasoft.com/media/bny-wlg-2410141309-1382812852-8.png",
+      description: "Ambience Public School is hosting exciting cultural and academic events this season.",
+      images: [
+        "./img/masonry-portfolio/img1.jpg",
+        "./img/masonry-portfolio/img2.jpg",
+      ],
     },
     {
       name: "Amity International school sector 6 Vasundhara Ghaziabad Uttar Pradesh",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRt8BCVh0qKGtee7ecuQSJZtDc2WOFvYMOqg&s",
-    },
-    {
-      name: "Delhi Public School, Delhi NCR",
-      logo: "https://dpsjhakri.com/images/Bgphotos/dps_logo.jpg",
-    },
-    {
-      name: "Ambience Public School, Safdarjung Enclave, Delhi",
-      logo: "https://c9.shauryasoft.com/media/bny-wlg-2410141309-1382812852-8.png",
-    },
-    {
-      name: "Lotus Valley international School",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTnYW6FjlKz-_5DCvBMfrFFLVIxPSLrVE5w&s",
-    },
-    {
-      name: "St. Mary’s School, Safdarjung Enclave, Delhi",
-      logo: "https://images.uniapply.com/uploads/college/image/logo/2188/webp/St_Marys_School_1944_Logo_1.webp",
-    },
-    {
-      name: "DL DAV MODEL SCHOOL PITAMPURA",
-      logo: "https://delhischoolsdirectory.com/assets/upload/profileimg/PRFIMGUSR54021667539348.png",
-    },
-    {
-      name: "Gyanshree school , Noida",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RGykDyH7gXX6UJccfMs7umA3xHj73Ard6Q&s",
+      description: "Amity International School is known for innovation and student engagement.",
+      images: ["./img/masonry-portfolio/img3.jpeg"],
     },
     {
       name: "Arwachin international school",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7KMSH2btgazMsMqFRdtsVCIHnBrLI1ZIvJA&s",
+      description: "Arwachin International School fosters creativity and holistic development.",
+      images: ["./img/masonry-portfolio/img4.jpeg"],
+    },
+    {
+      name: "Delhi Public School, Delhi NCR",
+      logo: "https://dpsjhakri.com/images/Bgphotos/dps_logo.jpg",
+      description: "DPS NCR is preparing for a major inter-school sports event.",
+      images: ["./img/masonry-portfolio/img5.jpeg"],
     },
     {
       name: "Holy Angels School",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7eHSsDe3u9HNhXCuNGinEL8LrnIkI6DNhHw&s",
+      description: "Holy Angels School encourages academic excellence and cultural programs.",
+      images: ["./img/masonry-portfolio/img6.jpg"],
+    },
+    {
+      name: "Lotus Valley international School",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTnYW6FjlKz-_5DCvBMfrFFLVIxPSLrVE5w&s",
+      description: "Lotus Valley International School is hosting student-led conferences.",
+      images: ["./img/masonry-portfolio/img7.jpeg"],
     },
     {
       name: "Mount Abu Public School",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL7RPtCwPcW5Wa6pdOyl1NOns1Mmmb29XlNQ&s",
+      description: "Mount Abu Public School is known for its cultural extravaganza.",
+      images: ["./img/masonry-portfolio/img8.jpeg"],
     },
     {
       name: "Parevartan School, Rajnagar Extension Ghaziabad",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU_qBCwxyYO7Dl_ethxt86HZSeJdSvnhqTg&s",
-    },
-    {
-      name: "Queen Mary's school Northend Model Town",
-      logo: "https://www.qmsmodeltown.com/image/schoollogo.png",
-    },
-    {
-      name: "Silverline Prestige School, Ghaziabad",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaJhRgqD-pp_LnBQ8d--4ptodvXnf4H8bMkA&s",
+      description: "Parevartan School promotes innovative and fun learning experiences.",
+      images: ["./img/masonry-portfolio/img9.jpeg"],
     },
     {
       name: "Vivekananda School",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVC3FJVHUACwR3V1By57lqlWpqmD9kf8IcQ&s",
+      description: "Vivekananda School organizes leadership and creativity workshops.",
+      images: ["./img/masonry-portfolio/img10.jpg"],
     },
+    {
+      name: "DPS IndiraPuram",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvRCwY4SruiFvNsk7rW4gdCNTdsXJJwSm6Q&s",
+      description: "DPS Indirapuram is preparing for a national level fest.",
+      images: ["./img/masonry-portfolio/img11.jpg"],
+    },
+    {
+      name: "DPSG Meerut Road",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwD0Cz4gIyXU0-P0ZQipHnAJKUpKGtDmyRwA&s",
+      description: "DPSG Meerut Road inspires students with academic and cultural activities.",
+      images: ["./img/masonry-portfolio/img12.jpeg"],
+    },
+    // ... add other upcoming schools
   ];
 
-  // Animations
-  const popUpContainer = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.2 } },
+  const pastSchools = [
+    { name: "Guru Harkrishan Public School, Shahdara, Delhi", logo: "https://www.schoolmykids.com/smk-media/2018/10/Guru-Harkrishan-Public-School-Shahdara-Delhi.png" },
+    { name: "Colonel Satsangi's Kiran Memorial Public School, Chattarpur, New Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6DKO33H3V7u85HK-1bwbMykyZVjhnzm9VeQ&s" },
+    { name: "Maxfort School, Rohini, Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcl1XPKv1Coymmia9WWGh327VFsUx1ykY7A&s" },
+    { name: "St Mary Senior Secondary School, Mayur Vihar Phase 3, Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWWect3ImWfq2UZGcAYel0kRmOOpbTIb8EmA&s" },
+    { name: "St. Mary’s School, Safdarjung Enclave, Delhi", logo: "https://images.uniapply.com/uploads/college/image/logo/2188/webp/St_Marys_School_1944_Logo_1.webp" },
+    { name: "DL DAV MODEL SCHOOL PITAMPURA", logo: "https://delhischoolsdirectory.com/assets/upload/profileimg/PRFIMGUSR54021667539348.png" },
+    { name: "Gyanshree school , Noida", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RGykDyH7gXX6UJccfMs7umA3xHj73Ard6Q&s" },
+    { name: "Queen Mary's school Northend Model Town", logo: "https://www.qmsmodeltown.com/image/schoollogo.png" },
+    { name: "Silverline Prestige School, Ghaziabad", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaJhRgqD-pp_LnBQ8d--4ptodvXnf4H8bMkA&s" },
+  ];
+
+  const [selectedSchool, setSelectedSchool] = useState(null);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => {
+    if (selectedSchool) setCurrentImage((prev) => (prev + 1) % selectedSchool.images.length);
   };
 
-  const popUpItem = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", stiffness: 200, damping: 15 },
-    },
+  const prevImage = () => {
+    if (selectedSchool) setCurrentImage((prev) => (prev === 0 ? selectedSchool.images.length - 1 : prev - 1));
   };
+
+  const SchoolCard = ({ school, isUpcoming }) => (
+    <motion.div
+      whileHover={{ y: -3, scale: 1.02 }} // gentle lift + tiny scale
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      className="rounded-lg bg-white shadow-md p-4 text-center cursor-pointer"
+      onClick={() => isUpcoming && setSelectedSchool(school) && setCurrentImage(0)}
+    >
+      <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
+        <img src={school.logo} alt={school.name} className="object-contain w-20 h-20" />
+      </div>
+      <h3 className="font-semibold text-sm text-sky-950">{school.name}</h3>
+    </motion.div>
+  );
+
+  const SchoolGrid = ({ schools, isUpcoming }) => (
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {schools.map((school, index) => (
+        <SchoolCard key={index} school={school} isUpcoming={isUpcoming} />
+      ))}
+    </div>
+  );
 
   return (
-    <div className="py-20 bg-gradient-to-b from-[#fdfaf5] to-[#f6f0e5]">
+    <div className="py-20 bg-gradient-to-b from-[#fdfaf5] to-[#f6f0e5] relative">
       <div className="container mx-auto px-4 text-center">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8">
-            Students From Top Schools Who Have Trained For{" "}
-            <span className="text-orange-600">Memory Jamboree </span>in the
-            past.
-          </h2>
-        </motion.div>
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8">
+          Upcoming Events in <span className="text-orange-600">Top Schools</span>
+        </h2>
 
-        {/* School Cards */}
-        <motion.div
-          className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
-          variants={popUpContainer}
-          initial="hidden"
-          whileInView="visible"
-        >
-          {topSchools.map((school, index) => (
-            <motion.div
-              key={index}
-              variants={popUpItem}
-              className="rounded-lg bg-white shadow-md hover:shadow-lg transition-shadow p-4 text-center cursor-pointer"
-              onClick={() => setSelectedSchool(school)}
-            >
-              <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
-                <img
-                  src={school.logo}
-                  alt={school.name}
-                  className="object-contain w-20 h-20"
-                />
-              </div>
-              <h3 className="font-semibold text-sm text-sky-950">
-                {school.name}
-              </h3>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+        <SchoolGrid schools={upcomingSchools} isUpcoming={true} />
 
-      {/* Popup Modal */}
-      <AnimatePresence>
         {selectedSchool && (
-          <motion.div
-            className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedSchool(null)}
-          >
-            <motion.div
-              className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-lg relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl"
-                onClick={() => setSelectedSchool(null)}
-              >
-                ✕
+          <div className="fixed top-1/2 left-1/2 w-[90%] max-w-2xl bg-white shadow-2xl rounded-lg p-6 z-50 transform -translate-x-1/2 -translate-y-1/2 border border-gray-200">
+            <div className="relative w-full h-56 mb-4">
+              <img src={selectedSchool.images[currentImage]} alt="Event" className="w-full h-56 object-cover rounded-lg" />
+              {selectedSchool.images.length > 1 && (
+                <>
+                  <button onClick={prevImage} className="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded-full">◀</button>
+                  <button onClick={nextImage} className="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded-full">▶</button>
+                </>
+              )}
+            </div>
+
+            <div className="flex flex-col items-center">
+              <img src={selectedSchool.logo} alt={selectedSchool.name} className="w-20 h-20 rounded-full object-contain mb-3" />
+              <h2 className="text-xl font-bold text-sky-950 mb-2">{selectedSchool.name}</h2>
+              <p className="text-gray-700 mb-4 text-center">{selectedSchool.description}</p>
+              <button onClick={() => setSelectedSchool(null)} className="mt-6 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700">
+                Close
               </button>
-
-              <div className="flex items-center space-x-3 mb-4">
-                <img
-                  src={selectedSchool.logo}
-                  alt={selectedSchool.name}
-                  className="w-12 h-12 object-contain"
-                />
-                <h3 className="text-lg font-bold text-sky-950">
-                  {selectedSchool.name}
-                </h3>
-              </div>
-
-              {/* ✅ Only clickable links */}
-              <ul className="text-left text-gray-700 space-y-3">
-                <li>
-                  📌 Registration after <b>26th Sept</b>{" "}
-                  <a
-                    href="https://imjo.in/yGpVry"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-600 hover:underline font-semibold whitespace-nowrap"
-                  >
-                    Click Here
-                  </a>
-                </li>
-                <li>
-                  💰 Early bird payment available till <b>26th Sept</b>{" "}
-                  <a
-                    href="https://imjo.in/Zc58Mv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-600 hover:underline font-semibold whitespace-nowrap"
-                  >
-                    Click Here
-                  </a>
-                </li>
-                <li>
-                  👥 Group registration{" "}
-                  <a
-                    href="https://imjo.in/5AyxyJ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-600 hover:underline font-semibold whitespace-nowrap"
-                  >
-                    Click Here
-                  </a>
-                </li>
-              </ul>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8 mt-20">
+          Other Schools where <span className="text-orange-600">Events Happened</span>
+        </h2>
+
+        <SchoolGrid schools={pastSchools} isUpcoming={false} />
+      </div>
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,7 @@ import { Portfolio } from './components/Portfolio.jsx';
 import { Team } from './components/Team.jsx';
 import { Sponsors } from './components/Sponsors.jsx';
 import { Achievements } from './components/Achievments.jsx';
+import Payments from './components/Payments.jsx';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
          <Discipline />
          <StorySection />
          <Benefits />
+         <Payments/>
          <Portfolio />
          <Team />
          <Achievements />

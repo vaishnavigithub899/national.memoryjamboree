@@ -100,12 +100,49 @@ export const Connect_with_us = () => {
                 Follow Us
               </h3>
               <div className="flex gap-6 text-3xl">
-                <a href="I want to know more about National Memory Championship”, +91 88009 18814" className="hover:scale-125 transition-transform text-green-500"><FaWhatsapp /></a>
-                <a href="https://www.instagram.com/whiteforestacademy/" className="hover:scale-125 transition-transform text-pink-500"><FaInstagram /></a>
-                <a href="https://www.facebook.com/WhiteForestAcademy" className="hover:scale-125 transition-transform text-blue-600"><FaFacebookF /></a>
-                <a href="https://www.youtube.com/@WhiteForestAcademy" className="hover:scale-125 transition-transform text-red-600"><FaYoutube /></a>
-                <a href="https://www.linkedin.com/in/coachmonicathomas/" className="hover:scale-125 transition-transform text-blue-700"><FaLinkedin /></a>
-              </div>
+  <a
+    href={`https://wa.me/918810569514?text=${encodeURIComponent(
+      "Hi,\nWe want to register as a school group. Kindly let us know the process."
+    )}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:scale-125 transition-transform text-green-500"
+  >
+    <FaWhatsapp />
+  </a>
+  <a
+    href="https://www.instagram.com/whiteforestacademy/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:scale-125 transition-transform text-pink-500"
+  >
+    <FaInstagram />
+  </a>
+  <a
+    href="https://www.facebook.com/WhiteForestAcademy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:scale-125 transition-transform text-blue-600"
+  >
+    <FaFacebookF />
+  </a>
+  <a
+    href="https://www.youtube.com/@WhiteForestAcademy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:scale-125 transition-transform text-red-600"
+  >
+    <FaYoutube />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/coachmonicathomas/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:scale-125 transition-transform text-blue-700"
+  >
+    <FaLinkedin />
+  </a>
+</div>
             </div>
           </motion.div>
         </div>
