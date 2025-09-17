@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Achievements = () => {
   const upcomingSchools = [
-    {
+     {
       name: "Ambience Public School, Safdarjung Enclave, Delhi",
       logo: "https://c9.shauryasoft.com/media/bny-wlg-2410141309-1382812852-8.png",
       description: "Ambience Public School is hosting exciting cultural and academic events this season.",
@@ -52,7 +52,7 @@ export const Achievements = () => {
       name: "Parevartan School, Rajnagar Extension Ghaziabad",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU_qBCwxyYO7Dl_ethxt86HZSeJdSvnhqTg&s",
       description: "Parevartan School promotes innovative and fun learning experiences.",
-      images: ["./img/masonry-portfolio/img9.jpeg"],
+      images: ["./img/masonry-portfolio/Lotus.jpeg"],
     },
     {
       name: "Vivekananda School",
@@ -72,10 +72,6 @@ export const Achievements = () => {
       description: "DPSG Meerut Road inspires students with academic and cultural activities.",
       images: ["./img/masonry-portfolio/img12.jpeg"],
     },
-    // ... add other upcoming schools
-  ];
-
-  const pastSchools = [
     { name: "Guru Harkrishan Public School, Shahdara, Delhi", logo: "https://www.schoolmykids.com/smk-media/2018/10/Guru-Harkrishan-Public-School-Shahdara-Delhi.png" },
     { name: "Colonel Satsangi's Kiran Memorial Public School, Chattarpur, New Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6DKO33H3V7u85HK-1bwbMykyZVjhnzm9VeQ&s" },
     { name: "Maxfort School, Rohini, Delhi", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcl1XPKv1Coymmia9WWGh327VFsUx1ykY7A&s" },
@@ -87,7 +83,7 @@ export const Achievements = () => {
     { name: "Silverline Prestige School, Ghaziabad", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaJhRgqD-pp_LnBQ8d--4ptodvXnf4H8bMkA&s" },
   ];
 
-  const [selectedSchool, setSelectedSchool] = useState(null);
+   const [selectedSchool, setSelectedSchool] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -98,12 +94,12 @@ export const Achievements = () => {
     if (selectedSchool) setCurrentImage((prev) => (prev === 0 ? selectedSchool.images.length - 1 : prev - 1));
   };
 
-  const SchoolCard = ({ school, isUpcoming }) => (
+  const SchoolCard = ({ school }) => (
     <motion.div
-      whileHover={{ y: -3, scale: 1.02 }} // gentle lift + tiny scale
-      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      whileHover={{ scale: 1.05, y: -5 }} // animate only on hover
+      transition={{ type: "spring", stiffness: 150, damping: 12 }}
       className="rounded-lg bg-white shadow-md p-4 text-center cursor-pointer"
-      onClick={() => isUpcoming && setSelectedSchool(school) && setCurrentImage(0)}
+      onClick={() => (school.images && school.description ? setSelectedSchool(school) && setCurrentImage(0) : null)}
     >
       <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100">
         <img src={school.logo} alt={school.name} className="object-contain w-20 h-20" />
@@ -112,10 +108,10 @@ export const Achievements = () => {
     </motion.div>
   );
 
-  const SchoolGrid = ({ schools, isUpcoming }) => (
+  const SchoolGrid = () => (
     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {schools.map((school, index) => (
-        <SchoolCard key={index} school={school} isUpcoming={isUpcoming} />
+      {upcomingSchools.map((school, index) => (
+        <SchoolCard key={index} school={school} />
       ))}
     </div>
   );
@@ -127,9 +123,9 @@ export const Achievements = () => {
           Upcoming Events in <span className="text-orange-600">Top Schools</span>
         </h2>
 
-        <SchoolGrid schools={upcomingSchools} isUpcoming={true} />
+        <SchoolGrid />
 
-        {selectedSchool && (
+        {selectedSchool && selectedSchool.images && selectedSchool.description && (
           <div className="fixed top-1/2 left-1/2 w-[90%] max-w-2xl bg-white shadow-2xl rounded-lg p-6 z-50 transform -translate-x-1/2 -translate-y-1/2 border border-gray-200">
             <div className="relative w-full h-56 mb-4">
               <img src={selectedSchool.images[currentImage]} alt="Event" className="w-full h-56 object-cover rounded-lg" />
@@ -151,32 +147,7 @@ export const Achievements = () => {
             </div>
           </div>
         )}
-
-        <h2 className="text-3xl md:text-4xl font-bold text-sky-950 mb-8 mt-20">
-          Other Schools where <span className="text-orange-600">Events Happened</span>
-        </h2>
-
-        <SchoolGrid schools={pastSchools} isUpcoming={false} />
       </div>
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

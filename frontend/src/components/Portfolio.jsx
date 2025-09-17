@@ -10,7 +10,7 @@ export const Portfolio = () => {
     "img/masonry-portfolio/img6.jpg",
     "img/masonry-portfolio/img7.jpeg",
     "img/masonry-portfolio/img8.jpeg",
-    "img/masonry-portfolio/img9.jpeg",
+    "img/masonry-portfolio/Lotus.jpeg",
     "img/masonry-portfolio/img10.jpg",
     "img/masonry-portfolio/img11.jpg",
     "img/masonry-portfolio/img12.jpeg",

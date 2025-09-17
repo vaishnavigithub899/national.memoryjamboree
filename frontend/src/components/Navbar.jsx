@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Home, BookOpen, Award, Phone } from "lucide-react"; // icons
+import { Menu, X, Home, BookOpen, Award, Phone } from "lucide-react";
+import { Link } from "react-router-dom"; // ✅ import Link
 import whiteforest from "/img/whiteforest.png";
 
 export const Navbar = () => {
@@ -8,7 +9,6 @@ export const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // shrink on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
@@ -18,10 +18,10 @@ export const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { name: "Home", href: "#hero", icon: <Home size={18} /> },
-    { name: "Categories", href: "#about", icon: <BookOpen size={18} /> },
-    { name: "Disciplines", href: "#services", icon: <Award size={18} /> },
-    { name: "Contact Us", href: "#contact", icon: <Phone size={18} /> },
+    { name: "Home", href: "/" }, // ✅ navigate to home page
+    { name: "Categories", href: "#about" },
+    { name: "Disciplines", href: "#services" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -35,7 +35,13 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between transition-all duration-500">
         {/* 🔹 Left: Logo */}
         <div>
-          <img src={whiteforest} alt="Whiteforest Logo" className="h-15 w-auto" />
+          <Link to="/">
+            <img
+              src={whiteforest}
+              alt="Whiteforest Logo"
+              className="h-15 w-auto cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* 🔹 Center: Menu */}
@@ -46,9 +52,6 @@ export const Navbar = () => {
               href={item.href}
               className="relative flex items-center gap-2 group"
             >
-              <span className="opacity-80 group-hover:opacity-100 transition-transform transform group-hover:-translate-y-0.5">
-                {item.icon}
-              </span>
               {item.name}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#FF6600] group-hover:w-full transition-all duration-300"></span>
             </a>
@@ -57,12 +60,12 @@ export const Navbar = () => {
 
         {/* 🔹 Right: Register */}
         <div className="hidden md:flex items-center">
-          <a href="/register">
+          <Link to="/register">
             <button className="bg-sky-950 text-white font-semibold px-9 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden">
               <span className="relative z-10">Register</span>
               <span className="absolute inset-0 rounded-full bg-sky-950 opacity-30 blur-md animate-ping"></span>
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* 🔹 Mobile Toggle */}
@@ -88,19 +91,16 @@ export const Navbar = () => {
               href={item.href}
               className="flex items-center gap-3 group"
             >
-              <span className="transform group-hover:scale-125 transition text-[#FF6600]">
-                {item.icon}
-              </span>
               {item.name}
             </a>
           ))}
 
-          <a href="/register" onClick={toggleMenu}>
+          <Link to="/register" onClick={toggleMenu}>
             <button className="mt-6 bg-[#000080] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:scale-105 transition relative">
               <span className="relative z-10">Register Now</span>
               <span className="absolute inset-0 rounded-full bg-[#000080] opacity-30 blur-md animate-ping"></span>
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

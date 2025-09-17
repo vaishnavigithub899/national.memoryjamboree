@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 import { motion } from "framer-motion";
 import { BookOpen, Pencil, GraduationCap } from "lucide-react";
 
 const Hero = () => {
-  // December = 11 (0-based month indexing in JS)
+  const navigate = useNavigate(); // ✅ initialize navigate
+
   const eventDate = new Date(2025, 11, 14, 0, 0, 0);
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
@@ -17,9 +19,7 @@ const Hero = () => {
   function getTimeLeft() {
     const now = new Date();
     const difference = eventDate - now;
-    if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-    }
+    if (difference <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
@@ -75,7 +75,7 @@ const Hero = () => {
           <span className="text-green-600">memory power</span>!
         </motion.p>
 
-        {/* Countdown (chalkboard style) */}
+        {/* Countdown */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,12 +106,17 @@ const Hero = () => {
           transition={{ delay: 2, duration: 1 }}
           className="mt-10 flex flex-col sm:flex-row gap-6"
         >
-          <a
-            href="/register"
+          {/* ✅ Use navigate for internal page routing */}
+          <button
+            onClick={() => {
+              navigate("/register");
+              window.scrollTo(0, 0); // Scroll to top
+            }}
             className="bg-yellow-400 text-sky-950 font-bold px-10 py-4 rounded-full shadow-lg hover:bg-yellow-500 transition transform hover:scale-110"
           >
             ✏️ Register Now
-          </a>
+          </button>
+
           <a
             href="#about"
             className="bg-sky-950 text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-sky-950 transition transform hover:scale-110"

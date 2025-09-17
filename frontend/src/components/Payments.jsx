@@ -1,14 +1,24 @@
 // src/pages/Payments.jsx
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaUsers, FaSchool, FaClock } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Payments() {
+  const navigate = useNavigate();
+
   const paymentOptions = [
+    {
+      title: "Registration After 26th Sept",
+      description:
+        "Standard registration fee applies after the early bird offer ends.",
+      color: "from-red-400 to-red-600",
+      type: "regular",
+      icon: <FaClock className="text-4xl mb-4" />,
+    },
     {
       title: "Early Bird Payment",
       description:
         "Register early and avail discounts. Early bird available till 26th Sept.",
-      extra: "Purpose of Payment:\nMJN-Early Bird\n\nAmount:\n₹ 3,000",
       color: "from-green-400 to-green-600",
       type: "early",
       icon: <FaClock className="text-4xl mb-4" />,
@@ -17,7 +27,6 @@ export default function Payments() {
       title: "Group Registration",
       description:
         "Special offers available for group registrations of students.",
-      extra: "Purpose of Payment:\nMJN-Group of 3 Registration\n\nAmount:\n₹ 7,500",
       color: "from-blue-400 to-blue-600",
       type: "group",
       icon: <FaUsers className="text-4xl mb-4" />,
@@ -34,7 +43,6 @@ Connect with our sales team to register as a school.`,
     },
   ];
 
-  // 👇 Smooth fade-up animation
   const cardVariants = {
     hidden: { opacity: 0, y: 60 },
     visible: (i) => ({
@@ -56,9 +64,28 @@ Connect with our sales team to register as a school.`,
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
 
+  // Function to navigate to the correct form based on type
+  const handleFormNavigation = (type) => {
+    switch (type) {
+      case "regular":
+        navigate("/RegistrationForm");
+        break;
+      case "early":
+        navigate("/Form");
+        break;
+      case "group":
+        navigate("/GroupRegistration");
+        break;
+      default:
+        break;
+    }
+    // Scroll to top after navigation
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fdfaf5] to-[#f6f0e5] py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 py-20 px-6">
+      <div className="max-w-7xl mx-auto text-center">
         <motion.h1
           className="text-4xl md:text-5xl font-bold text-sky-950 mb-12"
           initial={{ opacity: 0, y: -30 }}
@@ -69,28 +96,23 @@ Connect with our sales team to register as a school.`,
           Registration Options
         </motion.h1>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-4 gap-10">
           {paymentOptions.map((option, index) => (
             <motion.div
               key={index}
-              className={`rounded-2xl shadow-xl bg-gradient-to-r ${option.color} text-white p-8 flex flex-col justify-between hover:scale-105 transition-transform whitespace-pre-line`}
+              className={`rounded-2xl shadow-xl bg-gradient-to-r ${option.color} text-white px-8 py-10 flex flex-col items-center text-center hover:scale-105 transition-transform`}
               custom={index}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
             >
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center flex-grow">
                 {option.icon}
                 <h2 className="text-2xl font-bold mb-4">{option.title}</h2>
-                <p className="text-base leading-relaxed mb-4">
+                <p className="text-base leading-relaxed flex-grow flex items-center justify-center">
                   {option.description}
                 </p>
-                {option.extra && (
-                  <div className="bg-white/20 p-4 rounded-lg text-sm whitespace-pre-line">
-                    {option.extra}
-                  </div>
-                )}
               </div>
 
               {option.type === "school" ? (
@@ -103,19 +125,13 @@ Connect with our sales team to register as a school.`,
                   Message on WhatsApp
                 </motion.button>
               ) : (
-                <motion.a
+                <motion.button
                   whileHover={{ scale: 1.05 }}
-                  href={
-                    option.type === "early"
-                      ? "https://imjo.in/Zc58Mv"
-                      : "https://imjo.in/5AyxyJ"
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-block px-5 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-100"
+                  onClick={() => handleFormNavigation(option.type)}
+                  className="mt-6 px-5 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-100"
                 >
                   Register Now →
-                </motion.a>
+                </motion.button>
               )}
             </motion.div>
           ))}
