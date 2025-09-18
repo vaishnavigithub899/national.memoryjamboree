@@ -19,39 +19,36 @@ export const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-20 bg-gradient-to-b from-[#f0f4f8] to-[#d9e2ec]"
+      className="py-20 bg-gradient-to-b from-[#f0f4f8] to-[#d9e2ec] overflow-hidden"
     >
       <div className="container mx-auto px-6">
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-sky-950">
-            Impressions Of World Memory Championship 2024
-          </h2>
-        </motion.div>
+        <h2 className="text-3xl md:text-4xl font-bold text-sky-950 text-center mb-12">
+          Impressions Of Our Past Events
+        </h2>
 
-        {/* Portfolio Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {portfolioImages.map((src, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05, rotate: 1 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="overflow-hidden rounded-xl shadow-lg cursor-pointer"
-            >
-              <img
-                src={src}
-                alt={`Portfolio ${index + 1}`}
-                className="w-full h-60 object-cover sm:h-64 md:h-56 lg:h-60"
-              />
-            </motion.div>
-          ))}
+        <div className="overflow-hidden relative">
+          <motion.div
+            className="flex gap-6"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: portfolioImages.length * 2,
+                ease: "linear",
+              },
+            }}
+          >
+            {portfolioImages.concat(portfolioImages).map((src, index) => (
+              <div key={index} className="min-w-[calc(33.333%-1rem)] rounded-xl shadow-lg overflow-hidden">
+                <img
+                  src={src}
+                  alt={`Portfolio ${index + 1}`}
+                  className="w-full h-60 object-cover sm:h-64 md:h-56 lg:h-60"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

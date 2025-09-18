@@ -247,27 +247,8 @@ export default function Form() {
               <li>No refund if date/venue changes due to emergency.</li>
               <li>No refund for non-attendance.</li>
               <li>Fees cannot be adjusted to other courses or participants.</li>
-              <li>Brain Infinite reserves the right to revise terms anytime.</li>
+              <li>Whiteforest Academy reserves the right to revise terms anytime.</li>
             </ul>
-          </div>
-
-          <div className="col-span-2 flex items-center gap-2">
-            <input
-              type="checkbox"
-              name="terms"
-              checked={formData.terms}
-              onChange={handleChange}
-              required
-              className="w-5 h-5 accent-sky-600"
-            />
-            <span className="text-sm text-gray-700">
-              I accept the Terms and Conditions
-            </span>
-          </div>
-
-          {/* Fees */}
-          <div className="col-span-2 text-center text-lg font-bold text-green-800 bg-green-100 p-3 rounded-lg">
-            💰 Pay 7500/- 
           </div>
 
           {/* Submit */}
@@ -276,7 +257,7 @@ export default function Form() {
               href="https://imjo.in/5AyxyJ"
               className="w-full inline-block text-center bg-gradient-to-r from-sky-600 to-green-500 hover:opacity-90 text-white font-bold py-3 rounded-lg shadow-lg transition"
             >
-              Submit & Pay Now
+              💰 Pay ₹2500/-
             </a>
           </div>
         </form>

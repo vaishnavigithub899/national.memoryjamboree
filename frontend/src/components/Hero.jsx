@@ -50,7 +50,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="px-6 py-2 rounded-full bg-yellow-300/80 text-sky-950 font-bold shadow-md"
         >
-          🎓 School National Event | 14th Dec 2025, Sunday
+          🎓 Memory Sports National Event | 14th Dec 2025, Sunday
         </motion.span>
 
         {/* Main Title */}

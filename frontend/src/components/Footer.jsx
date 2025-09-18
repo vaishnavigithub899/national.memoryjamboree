@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -10,7 +18,6 @@ export const Footer = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* About Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -18,19 +25,35 @@ export const Footer = () => {
             transition={{ duration: 1 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-green-400">National Memory Jamboree</h3>
+            <h3 className="text-2xl font-bold text-green-400">
+              National Memory Jamboree
+            </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              National Memory Jamboree is an endeavour dedicated to the forest of 100 trillion neural connections inside a human brain. 
-              It offers Brain Training, Memory Mastery and Super Learning skills to students, teachers, parents, and professionals. 
-              Starting with 1 student in 2019, over the years WhiteForest has evolved to serve and train many schools, colleges, and corporates.
+              National Memory Jamboree is an endeavour dedicated to the forest
+              of 100 trillion neural connections inside a human brain. It offers
+              Brain Training, Memory Mastery and Super Learning skills to
+              students, teachers, parents, and professionals. Starting with 1
+              student in 2019, over the years WhiteForest has evolved to serve
+              and train many schools, colleges, and corporates.
             </p>
 
             {/* Social Media */}
+            {/* Social Media */}
             <div className="flex items-center gap-4 mt-4">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
+              {[
+                { Icon: FaFacebookF, link: "https://www.facebook.com/WhiteForestAcademy" },
+                { Icon: FaTwitter, link: "https://twitter.com/YourPage" },
+                { Icon: FaInstagram, link: "https://www.instagram.com/whiteforestacademy/" },
+                {
+                  Icon: FaLinkedinIn,
+                  link: "https://www.linkedin.com/in/coachmonicathomas/",
+                },
+              ].map(({ Icon, link }, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={link} // each icon has its own link
+                  target="_blank" // opens in new tab
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, color: "#FACC15" }}
                   className="text-gray-300 text-lg transition-colors"
                 >
@@ -47,11 +70,25 @@ export const Footer = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="space-y-4"
           >
-            <h4 className="text-xl font-semibold text-yellow-400">Useful Links</h4>
+            <h4 className="text-xl font-semibold text-yellow-400">
+              Useful Links
+            </h4>
             <ul className="space-y-2 text-gray-300">
-              {["Home", "Disciplines", "Gallery", "Categories", "Privacy Policy", "Contact Us"].map((link) => (
+              {[
+                "Home",
+                "Disciplines",
+                "Gallery",
+                "Categories",
+                "Privacy Policy",
+                "Contact Us",
+              ].map((link) => (
                 <li key={link}>
-                  <a href="#" className="hover:text-green-400 transition-colors">{link}</a>
+                  <a
+                    href="#"
+                    className="hover:text-green-400 transition-colors"
+                  >
+                    {link}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -64,12 +101,15 @@ export const Footer = () => {
             transition={{ duration: 1, delay: 0.4 }}
             className="space-y-4"
           >
-            <h4 className="text-xl font-semibold text-yellow-400">Our Location</h4>
+            <h4 className="text-xl font-semibold text-yellow-400">
+              Our Location
+            </h4>
             <div className="flex items-start gap-3 text-gray-300">
               <FaMapMarkerAlt className="mt-1" />
               <p>
-                Whiteforest Academy, 
-                <br />Green Park Extension, New Delhi 110016
+                Whiteforest Academy,
+                <br />
+                Green Park Extension, New Delhi 110016
               </p>
             </div>
           </motion.div>

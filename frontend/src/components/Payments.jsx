@@ -1,11 +1,8 @@
 // src/pages/Payments.jsx
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaUsers, FaSchool, FaClock } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
 export default function Payments() {
-  const navigate = useNavigate();
-
   const paymentOptions = [
     {
       title: "Registration After 26th Sept",
@@ -13,33 +10,32 @@ export default function Payments() {
         "Standard registration fee applies after the early bird offer ends.",
       color: "from-red-400 to-red-600",
       type: "regular",
-      icon: <FaClock className="text-4xl mb-4" />,
+      link: "https://imjo.in/yGpVry",
+      icon: <FaClock className="text-5xl mb-4" />,
     },
     {
-      title: "Early Bird Payment",
+      title: "Early Bird Discount  3000/-",
       description:
         "Register early and avail discounts. Early bird available till 26th Sept.",
       color: "from-green-400 to-green-600",
       type: "early",
-      icon: <FaClock className="text-4xl mb-4" />,
+      link: "https://imjo.in/Zc58Mv",
+      icon: <FaClock className="text-5xl mb-4" />,
     },
     {
-      title: "Group Registration",
-      description:
-        "Special offers available for group registrations of students.",
+      title: "Group Registration for per person 2500/-",
+      description: "Special discount for a group of 3 Limited Period Offer*.",
       color: "from-blue-400 to-blue-600",
       type: "group",
-      icon: <FaUsers className="text-4xl mb-4" />,
+      link: "https://imjo.in/5AyxyJ",
+      icon: <FaUsers className="text-5xl mb-4" />,
     },
     {
       title: "School Registration",
-      description: `Avail 65% OFF by registering as a school group at only Rs. 1225/-.
-Min group size of 10.
-
-Connect with our sales team to register as a school.`,
+      description: `Registration for school group of 10 get 50% off`,
       color: "from-orange-400 to-orange-600",
       type: "school",
-      icon: <FaSchool className="text-4xl mb-4" />,
+      icon: <FaSchool className="text-5xl mb-4" />,
     },
   ];
 
@@ -64,24 +60,18 @@ Connect with our sales team to register as a school.`,
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
 
-  // Function to navigate to the correct form based on type
-  const handleFormNavigation = (type) => {
-    switch (type) {
-      case "regular":
-        navigate("/RegistrationForm");
-        break;
-      case "early":
-        navigate("/Form");
-        break;
-      case "group":
-        navigate("/GroupRegistration");
-        break;
-      default:
-        break;
-    }
-    // Scroll to top after navigation
-    window.scrollTo(0, 0);
-  };
+  // Date logic
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  const sept26 = new Date(today.getFullYear(), 8, 26);
+  sept26.setHours(0, 0, 0, 0);
+
+  const filteredOptions = paymentOptions.filter((option) => {
+    if (option.type === "early" && today > sept26) return false;
+    if (option.type === "regular" && today <= sept26) return false;
+    return true;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 py-20 px-6">
@@ -96,11 +86,11 @@ Connect with our sales team to register as a school.`,
           Registration Options
         </motion.h1>
 
-        <div className="grid md:grid-cols-4 gap-10">
-          {paymentOptions.map((option, index) => (
+        <div className="flex flex-wrap justify-center gap-10">
+          {filteredOptions.map((option, index) => (
             <motion.div
               key={index}
-              className={`rounded-2xl shadow-xl bg-gradient-to-r ${option.color} text-white px-8 py-10 flex flex-col items-center text-center hover:scale-105 transition-transform`}
+              className={`rounded-3xl shadow-2xl bg-gradient-to-r ${option.color} text-white px-10 py-12 flex flex-col items-center text-center hover:scale-105 transition-transform w-72 min-h-[400px]`}
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -119,19 +109,21 @@ Connect with our sales team to register as a school.`,
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   onClick={handleWhatsApp}
-                  className="mt-6 flex items-center justify-center gap-2 px-5 py-3 bg-white text-green-600 font-semibold rounded-lg shadow hover:bg-gray-100"
+                  className="mt-6 flex items-center justify-center gap-2 px-6 py-3 bg-white text-green-600 font-semibold rounded-lg shadow hover:bg-gray-100"
                 >
                   <FaWhatsapp className="text-xl" />
-                  Message on WhatsApp
+                  Connect with us
                 </motion.button>
               ) : (
-                <motion.button
+                <motion.a
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => handleFormNavigation(option.type)}
-                  className="mt-6 px-5 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-100"
+                  href={option.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 px-6 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-100 inline-block"
                 >
                   Register Now →
-                </motion.button>
+                </motion.a>
               )}
             </motion.div>
           ))}
