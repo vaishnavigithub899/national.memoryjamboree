@@ -3,7 +3,7 @@ import {
   FaClock,
   FaFont,
   FaImages,
-  FaMicrophoneAlt,
+  FaRegClock,
   FaUserFriends,
 } from "react-icons/fa";
 import { MdOutlineNumbers } from "react-icons/md";
@@ -65,7 +65,7 @@ export const Discipline = () => {
       id: 8,
       title: "15 Minute Cards",
       desc: "Recall as many deck of cards in 15 minutes as possible.",
-      icon: <GiCardPlay className="w-12 h-12 text-indigo-700" />,
+      icon: <FaRegClock className="w-12 h-12 text-indigo-700" />,
       delay: 0.8,
     },
   ];
