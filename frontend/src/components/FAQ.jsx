@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa"; // ✅ import icon
+import { useNavigate } from "react-router-dom";
 
 export const FAQ = () => {
+  const navigate = useNavigate();
+
   const faqs = [
     {
       question: "📚 Will students miss academic time?",
@@ -126,15 +130,20 @@ export const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href={`https://wa.me/918810569514?text=${encodeURIComponent(
-                "Hi,\nWe want to register as a school group. Kindly let us know the process."
+                "Hi,\n\nI want to know more about the upcoming, Memory Jamboree competition."
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-sky-950 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"
+              className="flex items-center gap-2 bg-sky-950 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-md"
             >
-              💬 Chat on WhatsApp
+              <FaWhatsapp className="text-green-400 text-lg" /> {/* ✅ Icon added */}
+              Chat on WhatsApp
             </a>
-            <button className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-all shadow-md">
+            <button onClick={() => {
+              navigate("/register");
+              window.scrollTo(0, 0); // Scroll to top
+            }}
+             className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#3b82f6] text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-all shadow-md">
               🏫 Register Your School
             </button>
           </div>

@@ -7,9 +7,15 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaWhatsapp, // ✅ added
 } from "react-icons/fa";
 
 export const Footer = () => {
+  const whatsappNumber = "918810569514"; // ✅ with country code
+  const whatsappMessage = encodeURIComponent(
+    "Hi, \n\nI want to know more about the upcoming, Memory Jamboree competition."
+  );
+
   return (
     <footer className="bg-gray-900 text-white relative pt-16 pb-10 overflow-hidden">
       {/* Decorative Blobs */}
@@ -38,12 +44,17 @@ export const Footer = () => {
             </p>
 
             {/* Social Media */}
-            {/* Social Media */}
             <div className="flex items-center gap-4 mt-4">
               {[
-                { Icon: FaFacebookF, link: "https://www.facebook.com/WhiteForestAcademy" },
+                {
+                  Icon: FaFacebookF,
+                  link: "https://www.facebook.com/WhiteForestAcademy",
+                },
                 { Icon: FaTwitter, link: "https://twitter.com/YourPage" },
-                { Icon: FaInstagram, link: "https://www.instagram.com/whiteforestacademy/" },
+                {
+                  Icon: FaInstagram,
+                  link: "https://www.instagram.com/whiteforestacademy/",
+                },
                 {
                   Icon: FaLinkedinIn,
                   link: "https://www.linkedin.com/in/coachmonicathomas/",
@@ -51,8 +62,8 @@ export const Footer = () => {
               ].map(({ Icon, link }, idx) => (
                 <motion.a
                   key={idx}
-                  href={link} // each icon has its own link
-                  target="_blank" // opens in new tab
+                  href={link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, color: "#FACC15" }}
                   className="text-gray-300 text-lg transition-colors"
@@ -129,6 +140,18 @@ export const Footer = () => {
             <div className="flex items-center gap-3 text-gray-300">
               <FaEnvelope className="mt-1" />
               <p>query@memoryjamboree.com</p>
+            </div>
+            {/* ✅ WhatsApp */}
+            <div className="flex items-center gap-3 text-gray-300">
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors"
+              >
+                <FaWhatsapp className=" text-xl" />
+                <span>Chat on WhatsApp</span>
+              </a>
             </div>
           </motion.div>
         </div>

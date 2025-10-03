@@ -6,7 +6,8 @@ import { BookOpen, Pencil, GraduationCap } from "lucide-react";
 const Hero = () => {
   const navigate = useNavigate(); // ✅ initialize navigate
 
-  const eventDate = new Date(2025, 11, 14, 0, 0, 0);
+  // Set event date to 28th December 2025
+  const eventDate = new Date(2025, 11, 28, 0, 0, 0); // Month is 0-indexed (11 = December)
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   useEffect(() => {
@@ -50,7 +51,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="px-6 py-2 rounded-full bg-yellow-300/80 text-sky-950 font-bold shadow-md"
         >
-          🎓 Memory Sports National Event | 14th Dec 2025, Sunday
+          🎓 Memory Sports National Event | 28th Dec 2025, Sunday
         </motion.span>
 
         {/* Main Title */}

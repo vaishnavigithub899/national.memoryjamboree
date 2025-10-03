@@ -5,7 +5,7 @@ import { FaWhatsapp, FaUsers, FaSchool, FaClock } from "react-icons/fa";
 export default function Payments() {
   const paymentOptions = [
     {
-      title: "Registration After 26th Sept",
+      title: "REGISTRATION",
       description:
         "Standard registration fee applies after the early bird offer ends.",
       color: "from-red-400 to-red-600",
@@ -14,7 +14,7 @@ export default function Payments() {
       icon: <FaClock className="text-5xl mb-4" />,
     },
     {
-      title: "Early Bird Discount  3000/-",
+      title: "EARLY BIRD DISCOUNT 3000/-",
       description:
         "Register early and avail discounts. Early bird available till 26th Sept.",
       color: "from-green-400 to-green-600",
@@ -23,16 +23,17 @@ export default function Payments() {
       icon: <FaClock className="text-5xl mb-4" />,
     },
     {
-      title: "Group Registration for per person 2500/-",
-      description: "Special discount for a group of 3 Limited Period Offer*.",
+      title: "GROUP REGISTRATION",
+      description:
+        "Register as a group of 3 and get 25% off. Limited Period Offer*.",
       color: "from-blue-400 to-blue-600",
       type: "group",
       link: "https://imjo.in/5AyxyJ",
       icon: <FaUsers className="text-5xl mb-4" />,
     },
     {
-      title: "School Registration",
-      description: `Registration for school group of 10 get 50% off`,
+      title: "SCHOOL REGISTRATION",
+      description: `Register as a school group of 10 students. Get more than 50% off. `,
       color: "from-orange-400 to-orange-600",
       type: "school",
       icon: <FaSchool className="text-5xl mb-4" />,
@@ -53,9 +54,9 @@ export default function Payments() {
   };
 
   const handleWhatsApp = () => {
-    const phone = "918810569514";
+    const phone = "918810569514"; // ✅ WhatsApp number (with country code, India=91)
     const message = encodeURIComponent(
-      "Hi,\nWe want to register as a school group. Kindly let us know the process."
+      "Hi,\n\nI want to know more about the upcoming, Memory Jamboree competition."
     );
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
@@ -63,7 +64,7 @@ export default function Payments() {
   // Date logic
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  
+
   const sept26 = new Date(today.getFullYear(), 8, 26);
   sept26.setHours(0, 0, 0, 0);
 
@@ -83,7 +84,7 @@ export default function Payments() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Registration Options
+          Register Now
         </motion.h1>
 
         <div className="flex flex-wrap justify-center gap-10">

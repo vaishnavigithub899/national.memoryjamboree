@@ -102,7 +102,7 @@ export const Connect_with_us = () => {
               <div className="flex gap-6 text-3xl">
   <a
     href={`https://wa.me/918810569514?text=${encodeURIComponent(
-      "Hi,\nWe want to register as a school group. Kindly let us know the process."
+      "Hi,\n\nI want to know more about the upcoming, Memory Jamboree competition."
     )}`}
     target="_blank"
     rel="noopener noreferrer"
