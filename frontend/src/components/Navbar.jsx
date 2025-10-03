@@ -19,9 +19,9 @@ export const Navbar = () => {
 
   const menuItems = [
     { name: "Home", href: "/" }, // ✅ navigate to home page
-    { name: "Categories", href: "#about" },
-    { name: "Disciplines", href: "#services" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Categories", href: "/categories" },
+    { name: "Disciplines", href: "/disciplines" },
+    { name: "Contact Us", href: "/connect-us" },
   ];
 
   return (
