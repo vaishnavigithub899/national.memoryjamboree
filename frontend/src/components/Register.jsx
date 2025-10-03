@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import Payments from "./Payments.jsx";
+import { useEffect } from "react";
 
 const Register = () => {
+    
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-blue-50 to-green-50 px-6 py-12">
       {/* Banner Image */}
