@@ -5,7 +5,7 @@ import { FaWhatsapp, FaUsers, FaSchool, FaClock } from "react-icons/fa";
 export default function Payments() {
   const paymentOptions = [
     {
-      title: "REGISTRATION",
+      title: "SINGLE REGISTRATION",
       description:
         "Standard registration fee applies after the early bird offer ends.",
       color: "from-red-400 to-red-600",
