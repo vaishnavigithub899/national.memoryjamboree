@@ -15,7 +15,10 @@ import { Team } from './components/Team.jsx';
 import { Sponsors } from './components/Sponsors.jsx';
 import { Achievements } from './components/Achievments.jsx';
 import Register from "./components/Register.jsx";
-import Payments from "./components/Payments.jsx";
+// import Form from "./components/Form.jsx"; // Early Bird
+// import RegistrationForm from "./components/RegistrationForm.jsx"; // Regular
+// import GroupRegistration from "./components/GroupRegistration.jsx"; // Group
+import Payments from "./components/Payments.jsx"; // Payments Page
 
 function App() {
   return (
@@ -43,24 +46,17 @@ function App() {
             }
           />
 
-          {/* Individual Pages */}
-          <Route path="/categories" element={<Category />} />
-          <Route path="/disciplines" element={<Discipline />} />
-          <Route path="/connect-us" element={<Connect_with_us />} />
-
           {/* Register / Payments Pages */}
           <Route path="/register" element={<Register />} />
           <Route path="/payments" element={<Payments />} />
 
+          {/* Forms for each registration type */}
+          {/* <Route path="/form" element={<Form />} />                   {/* Early Bird */}
+          {/* <Route path="/RegistrationForm" element={<RegistrationForm />} /> {/* Regular */}
+          {/* <Route path="/GroupRegistration" element={<GroupRegistration />} /> Group  */}
+
           {/* Optional 404 */}
-          <Route
-            path="*"
-            element={
-              <h1 className="text-center mt-20 text-4xl font-bold">
-                404 Page Not Found
-              </h1>
-            }
-          />
+          <Route path="*" element={<h1 className="text-center mt-20 text-4xl font-bold">404 Page Not Found</h1>} />
         </Routes>
       </main>
       <Footer />
